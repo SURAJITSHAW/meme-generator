@@ -1,18 +1,48 @@
-import reactLogo from "../assets/reactjs-icon.png";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import trollFace from "../Troll-Face.png"
 
-const NavBar = () => {
+
+export default function ButtonAppBar() {
+
   return (
-    <div className="container p-2">
-
-    <header className="d-flex justify-content-between align-items-center shadow-sm pb-2">
-      <nav className="d-flex align-items-center justify-content-between" style={{width: "158px"}}>
-        <img width="30px" src={reactLogo} alt="react-logo" className="img-fluid"/>
-        <h3 style={{color: "#61DAFB"}}>ReactFacts</h3>
-      </nav>
-      <h4 className="d-none d-sm-block">React Course - Project 1</h4>
-    </header>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" sx={{
+        background: 'linear-gradient(45deg, #4e54c8, #8f94fb)'
+      }}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+          >
+            <Box
+              component="img"
+              sx={{
+                height: 30,
+                width: 34,
+              }}
+              alt="Troll Face"
+              src={trollFace}
+            />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            MemeGenerator
+          </Typography>
+          <Button sx={{
+            display: {
+                xs: 'none',
+                sm: 'block'
+            }
+          }} color="inherit">React - Project 3</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
-};
-
-export default NavBar;
+}
