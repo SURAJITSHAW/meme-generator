@@ -5,54 +5,52 @@ import defaultMeme from "../memeimg.png";
 const MainContent = () => {
   return (
     <>
-      <Container maxWidth="sm" style={{ marginTop: "50px" }}>
+      <Container maxWidth="md" style={{ marginTop: "50px" }}>
         <Grid
           container
-          spacing={7}
+          spacing={3}
           justify="center"
           style={{ marginBottom: "20px" }}
         >
-          <Grid item>
+          <Grid item xs={6}>
             <TextField
               id="outlined-basic"
               variant="filled"
               placeholder="Shut up"
             />
           </Grid>
-          <Grid item>
+          <Grid item xs={6}>
             <TextField
               id="outlined-basic"
               variant="filled"
               placeholder="and take my money"
             />
           </Grid>
-        </Grid>
-
+          <Grid item xs={12}>
             <Button
               variant="contained"
               endIcon={<ImageOutlinedIcon />}
               sx={{
                 background: "linear-gradient(45deg, #4e54c8, #8f94fb)",
                 display: "block",
-                width: "70%",
-                mx: "auto"
+                width: "100%",
               }}
             >
               Get a new meme image
             </Button>
-   
-
-        <Box
-          component="img"
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "auto",
-            padding: "30px"
-          }}
-          alt="Troll Face"
-          src={defaultMeme}
-        />
+          </Grid>
+          <Grid item xs={12}>
+            <Box
+              component="img"
+              sx={{
+                width: "100%",
+                height: "auto",
+              }}
+              alt="Troll Face"
+              src={defaultMeme}
+            />
+          </Grid>
+        </Grid>
       </Container>
     </>
   );
