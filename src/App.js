@@ -1,17 +1,13 @@
-import Navbar from "./components/Navbar";
-import MainContent from "./components/MainContent";
-import {CssBaseline } from "@mui/material";
-
-
+import React from "react";
+import Header from "./components/Header";
+import Meme from "./components/Meme";
 
 function App() {
-
   return (
-    <CssBaseline>
-      <Navbar />
-      <MainContent />
-    </CssBaseline>
+    <div>
+    <Header />
+    <Meme />
+    </div>
   );
 }
-
 export default App;
