@@ -1,7 +1,5 @@
-## card
-- card-title with h*
-- card-body
-- <a> with .card-link
-- card-subtitle
-- card-text
-- card-footer
+# Meme Generator
+It's a fun project, I made following my React JS course instructor. 
+
+## Live link 🔗 
+[Meme Generator](https://meme-generator-surajit.netlify.app/)
